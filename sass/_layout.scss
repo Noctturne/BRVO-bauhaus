@@ -55,3 +55,44 @@ body{
 .projects {
     grid-column: full-start / full-end;
 }
+
+
+
+
+/*
+
+    HEADER
+
+*/
+.site-header {
+    grid-column: full-start / col-end 8;
+    background: url(../images/header-op.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    align-items: center;
+    text-align: center;
+
+    &__hero {
+        padding: 0 5rem;
+    }
+
+    &__title {
+        color: $color-secondary;
+        letter-spacing: -0.05em;
+    }
+}
+
+
+
+
+/*
+
+    FOOTER
+
+*/
+.site-footer {
+    background-color: $color-primary;
+    grid-column: full-start / full-end;
+}

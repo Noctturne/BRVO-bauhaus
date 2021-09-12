@@ -5,34 +5,70 @@
 */
 /* COLOR */
 /* TYPOGRAPHY */
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+/*
+
+    UTILITIES
+
+*/
+.display-1 {
+  font-size: 7rem;
+}
+
 /*
 
     NAV
 
 */
 .navbar {
-  background-color: #22263f;
+  background-color: #FFF;
   grid-column: full-start/full-end;
-  color: #f9f9fa;
+  color: #212529;
 }
 
 /*
 
-    HEADER
+    BUTTONS
 
 */
-.site-header {
-  grid-column: full-start/col-end 8;
+button {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 0;
+  outline: transparent;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
-/*
-
-    FOOTER
-
-*/
-.site-footer {
-  background-color: #22263f;
-  grid-column: full-start/full-end;
+.btn-outline-primary {
+  color: #212529;
+  border: 1px solid #212529;
+}
+.btn-outline-primary:hover {
+  background-color: #212529;
+  color: #FFF;
 }
 
 * {
@@ -86,6 +122,38 @@ body {
 }
 
 .projects {
+  grid-column: full-start/full-end;
+}
+
+/*
+
+    HEADER
+
+*/
+.site-header {
+  grid-column: full-start/col-end 8;
+  background: url(../images/header-op.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+.site-header__hero {
+  padding: 0 5rem;
+}
+.site-header__title {
+  color: #dc3724;
+  letter-spacing: -0.05em;
+}
+
+/*
+
+    FOOTER
+
+*/
+.site-footer {
+  background-color: #212529;
   grid-column: full-start/full-end;
 }
 
