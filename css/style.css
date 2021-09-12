@@ -5,6 +5,17 @@
 */
 /* COLOR */
 /* TYPOGRAPHY */
+/*
+
+    NAV
+
+*/
+.navbar {
+  background-color: #22263f;
+  display: flex;
+  justify-content: right;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +37,17 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6;
+}
+
+/*
+
+   GRID
+    - min-content: adapt to content
+
+*/
+.container {
+  display: grid;
+  grid-template-rows: 8vh 80vh min-content 50vw repeat(2, min-content);
 }
 
 /*# sourceMappingURL=style.css.map */

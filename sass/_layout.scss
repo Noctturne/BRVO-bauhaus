@@ -20,3 +20,14 @@ body{
     font-weight: $font-weight-base;
     line-height: $line-height-base;
 }
+
+/*
+
+   GRID
+    - min-content: adapt to content
+
+*/
+.container {
+    display: grid;
+    grid-template-rows: 8vh 80vh min-content 50vw repeat(2, min-content);
+}
