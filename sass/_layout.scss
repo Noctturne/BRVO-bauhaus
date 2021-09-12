@@ -35,6 +35,21 @@ body{
 
 .partners {
     grid-column: col-end 9 / full-end;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    &__list {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        align-items: center;
+    }
+
+    &__image {
+        width: 15rem;
+        display: block;
+    }
 }
 
 .services {
