@@ -5,6 +5,23 @@
 */
 .navbar {
     background-color: $color-primary;
-    display: flex;
-    justify-content: right;
+    grid-column: full-start / full-end;
+    color: $color-light;
+}
+/*
+
+    HEADER
+
+*/
+.site-header {
+    grid-column: full-start / col-end 8;
+}
+/*
+
+    FOOTER
+
+*/
+.site-footer {
+    background-color: $color-primary;
+    grid-column: full-start / full-end;
 }

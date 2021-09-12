@@ -12,8 +12,27 @@
 */
 .navbar {
   background-color: #22263f;
-  display: flex;
-  justify-content: right;
+  grid-column: full-start/full-end;
+  color: #f9f9fa;
+}
+
+/*
+
+    HEADER
+
+*/
+.site-header {
+  grid-column: full-start/col-end 8;
+}
+
+/*
+
+    FOOTER
+
+*/
+.site-footer {
+  background-color: #22263f;
+  grid-column: full-start/full-end;
 }
 
 * {
@@ -47,7 +66,27 @@ body {
 */
 .container {
   display: grid;
-  grid-template-rows: 8vh 80vh min-content 50vw repeat(2, min-content);
+  grid-template-rows: 8vh 80vh 80vh 50vh repeat(2, min-content);
+  grid-template-columns: [full-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [full-end];
+}
+
+.partners {
+  grid-column: col-end 9/full-end;
+}
+
+.services {
+  grid-column: center-start/center-end;
+}
+
+.enviroment__pictures {
+  grid-column: full-start/col-end 6;
+}
+.enviroment__content {
+  grid-column: col-start 7/full-end;
+}
+
+.projects {
+  grid-column: full-start/full-end;
 }
 
 /*# sourceMappingURL=style.css.map */
