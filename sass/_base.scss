@@ -1,3 +1,11 @@
+/* BREAKPOINTS  */
+$breakpoint-xlg: 75em;     // 1200 / 16
+$breakpoint-lg: 64em;     // 1024 / 16
+$breakpoint-md: 48em;     // 768 / 16
+$breakpoint-sm: 36em;     // 576 / 16
+$breakpoint-sm: 36em;     // 375 / 16
+
+
 /*
 
     VARIABLES
@@ -39,5 +47,13 @@ small { font-weight: $font-weight-small; }
 
 */
 .px-2 { padding: 2rem 0; }
-.display-1{ font-size: 7rem; }
+
+.display-1{ 
+    font-size: 7rem; 
+
+    @media only screen and (max-width: $breakpoint-sm) {
+        font-size: 5rem; 
+    }
+}
+
 .text-center { text-align: center; }

@@ -7,6 +7,10 @@
     background-color: $color-white;
     grid-column: full-start / full-end;
     color: $color-primary;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /*

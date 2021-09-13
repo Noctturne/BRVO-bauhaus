@@ -1,3 +1,4 @@
+/* BREAKPOINTS  */
 /*
 
     VARIABLES
@@ -49,6 +50,11 @@ small {
 .display-1 {
   font-size: 7rem;
 }
+@media only screen and (max-width: 36em) {
+  .display-1 {
+    font-size: 5rem;
+  }
+}
 
 .text-center {
   text-align: center;
@@ -63,6 +69,9 @@ small {
   background-color: #FFF;
   grid-column: full-start/full-end;
   color: #212529;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*
@@ -106,6 +115,21 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media only screen and (max-width: 64em) {
+  html {
+    font-size: 60%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 36em) {
+  html {
+    font-size: 45%;
+  }
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -124,6 +148,21 @@ body {
   display: grid;
   grid-template-rows: 8vh 80vh 80vh 60vh repeat(2, min-content);
   grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 64em) {
+  .container {
+    grid-template-rows: 8vh 80vh 100vh 60vh repeat(2, min-content);
+  }
+}
+@media only screen and (max-width: 48em) {
+  .container {
+    grid-template-rows: 8vh 80vh 80vh 50vh repeat(2, min-content);
+  }
+}
+@media only screen and (max-width: 36em) {
+  .container {
+    grid-template-rows: 8vh 60vh min-content min-content repeat(2, min-content);
+  }
 }
 
 /*
@@ -149,6 +188,11 @@ body {
   line-height: 1.2;
   padding: 2rem 0;
 }
+@media only screen and (max-width: 75em) {
+  .site-header {
+    grid-column: full-start/full-end;
+  }
+}
 
 /*
 
@@ -160,6 +204,8 @@ body {
   display: grid;
   align-content: center;
   justify-content: center;
+  justify-items: center;
+  grid-row-gap: 2rem;
 }
 .partners__title {
   color: #212529;
@@ -167,11 +213,18 @@ body {
 .partners__list {
   display: grid;
   grid-template-columns: min-content max-content;
+  grid-column-gap: 2rem;
+  grid-row-gap: 5vh;
   align-items: center;
 }
 .partners__image {
   width: 15rem;
   display: block;
+}
+@media only screen and (max-width: 75em) {
+  .partners {
+    display: none;
+  }
 }
 
 /*
@@ -185,6 +238,12 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4rem;
   align-items: center;
+}
+@media only screen and (max-width: 36em) {
+  .services {
+    margin: 2rem 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .service__icon {
@@ -209,6 +268,17 @@ body {
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
 }
+@media only screen and (max-width: 64em) {
+  .enviroment__pictures {
+    grid-column: center-start/col-start 8;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .enviroment__pictures {
+    grid-column: 1/-1;
+    margin: 2rem 0;
+  }
+}
 .enviroment__img--1 {
   width: 100%;
   grid-row: 1/7;
@@ -220,6 +290,11 @@ body {
   grid-row: 4/6;
   grid-column: 3/7;
   z-index: 50;
+}
+@media only screen and (max-width: 36em) {
+  .enviroment__img--2 {
+    display: none;
+  }
 }
 .enviroment__content {
   grid-column: col-start 7/center-end;
@@ -235,15 +310,19 @@ body {
       align-items: flex-start;
   */
 }
-
-/*
-
-    FOOTER
-
-*/
-.site-footer {
-  background-color: #212529;
-  grid-column: full-start/full-end;
+@media only screen and (max-width: 64em) {
+  .enviroment__content {
+    grid-column: col-start 9/center-end;
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .enviroment__content {
+    grid-column: 1/-1;
+    margin: 2rem 0;
+    justify-items: center;
+    text-align: center;
+  }
 }
 
 /* 
@@ -319,6 +398,29 @@ body {
   object-fit: cover;
   display: block;
   box-shadow: 0 2rem 5rem rgba(33, 37, 41, 0.1);
+}
+@media only screen and (max-width: 36em) {
+  .projects {
+    grid-column: full-start/full-end;
+    margin: 2rem 0;
+  }
+}
+
+/*
+
+    FOOTER
+
+*/
+.site-footer {
+  background-color: #212529;
+  grid-column: full-start/full-end;
+  padding: 10rem 0;
+  color: #f9f9fa;
+}
+@media only screen and (max-width: 36em) {
+  .site-footer {
+    padding: 5rem 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
