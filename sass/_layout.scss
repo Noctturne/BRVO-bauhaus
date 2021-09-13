@@ -14,7 +14,7 @@ html {
     font-size: 62.5%;       // 1 rem = 10px; 10px/16px = 62.5%
 }
 
-body{
+body {
     font-family: $font-family-base;
     font-size: $font-size-base;
     font-weight: $font-weight-base;
@@ -33,37 +33,7 @@ body{
     grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
 }
 
-.partners {
-    grid-column: col-start 9 / full-end;
 
-    display: grid;
-    align-content: center;
-    justify-content: center;
-
-    &__list {
-        display: grid;
-        grid-template-columns: min-content max-content;
-        align-items: center;
-    }
-
-    &__image {
-        width: 15rem;
-        display: block;
-    }
-}
-
-
-
-.enviroment {
-
-    &__pictures {
-        grid-column: center-start  / col-start 6;
-    }
-
-    &__content {
-        grid-column: col-start 7 / center-end;
-    }
-}
 
 .projects {
     grid-column: full-start / full-end;
@@ -94,11 +64,47 @@ body{
     &__title {
         color: $color-secondary;
         letter-spacing: -0.05em;
+        line-height: 1.2;
+        padding: 2rem 0;
     }
 }
 
+
+
+
 /*
 
+    PARTNERS
+    
+*/
+.partners {
+    grid-column: col-start 9 / full-end;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    &__title {
+        color: $color-primary;
+    }
+    
+    &__list {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        align-items: center;
+    }
+
+    &__image {
+        width: 15rem;
+        display: block;
+    }
+}
+
+
+
+
+
+/*
     SERVICES
 
 */
@@ -125,6 +131,62 @@ body{
     }
 
 }
+
+
+
+
+/*
+
+    ENVIROMENT 
+*/
+.enviroment {
+    margin: 15rem 0;
+
+    &__pictures {
+        grid-column: center-start  / col-start 6;
+
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+    }
+
+    &__img--1 {
+        width: 100%;
+        grid-row: 1 / 7;
+        grid-column: 1 / 7;
+        box-shadow: 0 2rem 5rem rgba($color-primary, .1);
+    }
+
+    &__img--2 {
+        width: 115%;
+        grid-row: 4 / 6;
+        grid-column: 3 / 7;
+        z-index: 50;
+    }
+
+    &__content {
+        grid-column: col-start 7 / center-end;
+        background-color: $color-light;
+
+        padding: 6rem 12rem;
+
+        display: grid;
+        align-content: center;
+        justify-items: start;
+
+        /*
+            display: flex;
+            flex-direction: column;
+            justify-content: center;        // Flexbox
+            align-items: flex-start;
+        */
+    }
+
+}
+
+
+
 /*
 
     FOOTER
