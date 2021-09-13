@@ -30,11 +30,11 @@ body{
 .container {
     display: grid;
     grid-template-rows: 8vh 80vh 80vh 50vh repeat(2, min-content);
-    grid-template-columns: [full-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [full-end]; // 1200 / 12
+    grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
 }
 
 .partners {
-    grid-column: col-end 9 / full-end;
+    grid-column: col-start 9 / full-end;
 
     display: grid;
     align-content: center;
@@ -52,18 +52,16 @@ body{
     }
 }
 
-.services {
-    grid-column: center-start / center-end;
-}
+
 
 .enviroment {
 
     &__pictures {
-        grid-column: full-start  / col-end 6;
+        grid-column: center-start  / col-start 6;
     }
 
     &__content {
-        grid-column: col-start 7 / full-end;
+        grid-column: col-start 7 / center-end;
     }
 }
 
@@ -80,7 +78,7 @@ body{
 
 */
 .site-header {
-    grid-column: full-start / col-end 8;
+    grid-column: full-start / col-start 8;
     background: url(../images/header-op.png) no-repeat;
     background-size: cover;
     background-position: center;
@@ -99,9 +97,34 @@ body{
     }
 }
 
+/*
 
+    SERVICES
 
+*/
+.services {
+    grid-column: center-start / center-end;
 
+    margin: 15rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    align-items: center;
+
+}
+
+.service {
+
+    &__icon {
+        color: $color-primary;
+    }
+
+    &__title {
+        color: $color-primary;
+        padding: 2rem 0;
+    }
+
+}
 /*
 
     FOOTER

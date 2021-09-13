@@ -107,11 +107,11 @@ body {
 .container {
   display: grid;
   grid-template-rows: 8vh 80vh 80vh 50vh repeat(2, min-content);
-  grid-template-columns: [full-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] 1fr [full-end];
+  grid-template-columns: [full-start] minmax(8rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
 }
 
 .partners {
-  grid-column: col-end 9/full-end;
+  grid-column: col-start 9/full-end;
   display: grid;
   align-content: center;
   justify-content: center;
@@ -126,15 +126,11 @@ body {
   display: block;
 }
 
-.services {
-  grid-column: center-start/center-end;
-}
-
 .enviroment__pictures {
-  grid-column: full-start/col-end 6;
+  grid-column: center-start/col-start 6;
 }
 .enviroment__content {
-  grid-column: col-start 7/full-end;
+  grid-column: col-start 7/center-end;
 }
 
 .projects {
@@ -147,7 +143,7 @@ body {
 
 */
 .site-header {
-  grid-column: full-start/col-end 8;
+  grid-column: full-start/col-start 8;
   background: url(../images/header-op.png) no-repeat;
   background-size: cover;
   background-position: center;
@@ -161,6 +157,28 @@ body {
 .site-header__title {
   color: #dc3724;
   letter-spacing: -0.05em;
+}
+
+/*
+
+    SERVICES
+
+*/
+.services {
+  grid-column: center-start/center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+  align-items: center;
+}
+
+.service__icon {
+  color: #212529;
+}
+.service__title {
+  color: #212529;
+  padding: 2rem 0;
 }
 
 /*
